@@ -2,7 +2,7 @@
 
 create table usuario(
     id serial,
-    email varchar,
+    email varchar unique,
     activo boolean
 )
 
@@ -17,8 +17,9 @@ create table prioridad(
 
 create table tarea(
     id serial,
-    titulo,
-    prioridad_id,
-    autior_id 
+    titulo varchar,
+    prioridad_id int,
+    usuario_id int, 
+    completado boolean
 )
 
